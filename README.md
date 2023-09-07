@@ -27,8 +27,8 @@ Consists of a Flask webserver and a Python class for dealing with chunk data loa
 
 # Notes on future work
 
-As this is just meant to be a simple POC, I propably won't be putting much further work into this. This project was implemented in just a few hours of work.
-If you want to play with this on your own, feel free to see this as a jump start on (what chatgpt called) a "unique and interesting" project.
-To set up the development environment I followed this tutorial: https://www.youtube.com/watch?v=tnJZMaoMPhE
-I used ChatGPT for suggesting a frontend library to use as a basic heightmap renderer. Among the top suggestions I found Babylon.js, which is why the javascript code for displaying the generated image data is taken to 99,5% from the example at https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/set/height_map
-To get the job done as quickly as possible, I implemented most of the functionality on the python side of the application. ChatGPT was also a great help while avoiding reading actual paper api documentation.
+As this is just meant to be a simple POC, I propably won't be putting much further work into this. This project was implemented in just a few hours of work.  
+If you want to play with this on your own, feel free to see this as a jump start on (what chatgpt called) a "unique and interesting" project.  
+To set up the development environment I followed this tutorial: https://www.youtube.com/watch?v=tnJZMaoMPhE  
+I used ChatGPT for suggesting a frontend library to use as a basic heightmap renderer. Among the top suggestions I found Babylon.js, which is why the javascript code for displaying the generated image data is taken to 99,5% from the example at https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/set/height_map  
+To get the job done as quickly as possible, I implemented most of the functionality on the python side of the application. ChatGPT was also a great help while avoiding reading actual paper api documentation.  
