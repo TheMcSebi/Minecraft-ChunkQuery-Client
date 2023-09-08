@@ -8,8 +8,8 @@ app = Flask("ChunkQuery-Viewer")
 app.template_folder = "viewer"
 app.static_folder = "viewer/textures"
 
-PLAYER_NAME = "TheMcSebi"
 CHUNK_RADIUS = 12
+PLAYER_NAME = "default player name"
 MAP_RENDER_SIZE = 200
 API_SERVER = "127.0.0.1:8090"
 
@@ -17,7 +17,7 @@ chunk_storage = None
 
 @app.route("/")
 def route_index():
-    return render_template("index.html", size=MAP_RENDER_SIZE, radius=CHUNK_RADIUS, player_name=PLAYER_NAME)
+    return render_template("index.html", size=MAP_RENDER_SIZE, radius=CHUNK_RADIUS)
 
 @app.route("/ctrl")
 def route_ctrl():
