@@ -1,0 +1,75 @@
+<html>
+<head>
+
+</head>
+<body>
+<input type="text" id="player_name" value="{{ player_name }}"/>
+<input type="checkbox" id="force"/> Force
+<br>
+<button type="button" onclick="proc_update()">update</button>
+<button type="button" onclick="proc_update_images()">update images</button>
+<button type="button" onclick="window.open('/', '_blank');">Open in heightmap viewer</button>
+<br>
+<div id="image-container"></div>
+<br>
+</body>
+<script type="text/javascript">
+
+    function proc_update() {
+        playerName = document.getElementById('player_name').value;
+        document.cookie = "player_name=" + playerName + "; expires={{ cookie_expiration }}; path=/";
+        fetch("/update", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "player": playerName,
+                "force": document.getElementById('force').checked,
+            })
+        }).then(res => res.json()).then(data => {
+            console.log(data);
+        }).catch(err => {
+            console.log(err);
+        });
+    }
+
+    function proc_update_images() {
+        fetch("/heightmap.png", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "player": document.getElementById('player_name').value,
+            })
+        }).then(res => res.blob()).then(blob => {
+            const imageUrl = URL.createObjectURL(blob);
+            const imageElement = document.createElement("img");
+            imageElement.src = imageUrl;
+            const container = document.getElementById("image-container");
+            container.appendChild(imageElement);
+        }).catch(err => {
+            console.log(err);
+        });
+
+        fetch("/textures.png", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "player": document.getElementById('player_name').value,
+            })
+        }).then(res => res.blob()).then(blob => {
+            const imageUrl = URL.createObjectURL(blob);
+            const imageElement = document.createElement("img");
+            imageElement.src = imageUrl;
+            const container = document.getElementById("image-container");
+            container.appendChild(imageElement);
+        }).catch(err => {
+            console.log(err);
+        });
+    }
+</script>
+</html>
