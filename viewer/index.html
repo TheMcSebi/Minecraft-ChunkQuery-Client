@@ -94,6 +94,10 @@
             camera.upperRadiusLimit = 150;
             camera.attachControl(canvas, true);
 
+            if(getCookie("player_name") == "") {
+                window.location.href = "/ctrl";
+                return;
+            }
             // Ground
             var groundMaterial = new BABYLON.StandardMaterial("ground", scene);
             groundMaterial.diffuseTexture = new BABYLON.Texture("textures.png?player=" + getCookie("player_name"), scene);

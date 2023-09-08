@@ -1,7 +1,7 @@
 import requests
 
 from flask import Flask, render_template, send_file, request
-from datetime import datetime
+from datetime import datetime, timedelta
 from ChunkStorage import ChunkStorage
 
 app = Flask("ChunkQuery-Viewer")
@@ -21,7 +21,8 @@ def route_index():
 
 @app.route("/ctrl")
 def route_ctrl():
-    cookie_expiration = datetime.now().strftime('%a, %d %b %Y %H:%M:%S UTC')
+    one_day_in_future = datetime.now() + timedelta(days=7)
+    cookie_expiration = one_day_in_future.strftime('%a, %d %b %Y %H:%M:%S UTC')
     return render_template("ctrl.html", player_name=PLAYER_NAME, cookie_expiration=cookie_expiration)
 
 @app.route("/status")
