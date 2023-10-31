@@ -5,7 +5,7 @@ Minecraft heightmap renderer proof-of-concept
 
 Simple heightmap renderer for displaying part of a minecraft world.
 
-Consists of a Flask webserver and a Python class for dealing with chunk data loaded from servers using this plugin: https://github.com/TheMcSebi/Minecraft-ChunkViewer-Plugin
+Consists of a Flask webserver and a Python class for dealing with chunk data loaded from servers using this plugin: https://github.com/TheMcSebi/Minecraft-ChunkQuery-Plugin
 
 ## Currently included
 
