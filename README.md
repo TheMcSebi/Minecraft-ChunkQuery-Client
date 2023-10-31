@@ -1,6 +1,8 @@
 # Minecraft-ChunkQuery-Client
 Minecraft heightmap renderer proof-of-concept
 
+![image](https://github.com/TheMcSebi/Minecraft-ChunkQuery-Client/assets/1323131/6a633920-a443-497d-a757-fac324aca5c1)
+
 ## Description
 
 Simple heightmap renderer for displaying part of a minecraft world.
@@ -27,6 +29,13 @@ Consists of a Flask webserver and a Python class for dealing with chunk data loa
 - Start the server: `python server.py`
 
 The code was tested with Python 3.11, but there's no magic here, so all future versions of Python 3 should work as well. Some type hints do require a minimum Python version of 3.10, though.
+
+# Screenshot
+
+The top image is a screenshot of the web-viewer of the heightmap and colormap images.  
+The below image is a minecraft screenshot of roughly the same area. Shaders are ComplementaryShaders on extreme profile.
+![image](https://github.com/TheMcSebi/Minecraft-ChunkQuery-Client/assets/1323131/bced838e-4af4-40b1-ae4e-e8f2d249231f)
+
 
 # Notes on future work
 
