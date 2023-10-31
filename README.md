@@ -34,7 +34,9 @@ The code was tested with Python 3.11, but there's no magic here, so all future v
 
 The top image is a screenshot of the web-viewer of the heightmap and colormap images.  
 The below image is a minecraft screenshot of roughly the same area. Shaders are ComplementaryShaders on extreme profile.
-![image](https://github.com/TheMcSebi/Minecraft-ChunkQuery-Client/assets/1323131/bced838e-4af4-40b1-ae4e-e8f2d249231f)
+
+![image](https://github.com/TheMcSebi/Minecraft-ChunkQuery-Client/assets/1323131/fa85de92-7230-477b-935d-342a313bb5bc)
+
 
 
 # Notes on future work
